@@ -1,0 +1,24 @@
+{
+  "_comment": "Synthetic. Raw BI v2-shaped records keyed by otype. Scenarios: 10/11 are two deleted copies of report 20; 12 has no replacement; dataset 30 matches two active datasets (40, 41); report 13 points at a folder that was not extracted; column 100 keys through deleted report 10.",
+  "bi_folder": [
+    {"id": 1, "name": "Finance WS", "external_id": "ws-fin", "deleted": false, "parent_folder": null},
+    {"id": 2, "name": "Monthly", "external_id": "fld-monthly", "deleted": false, "parent_folder": 1}
+  ],
+  "bi_report": [
+    {"id": 10, "name": "P&L", "external_id": "rpt-pnl", "deleted": true, "parent_folder": 2},
+    {"id": 11, "name": "P&L ", "external_id": "rpt-pnl", "deleted": true, "parent_folder": {"id": 2}},
+    {"id": 12, "name": "Old Report", "external_id": "rpt-old", "deleted": true, "parent_folder": 2},
+    {"id": 13, "name": "Orphan", "external_id": "rpt-orphan", "deleted": true, "parent_folder": 999},
+    {"id": 20, "name": "P&L", "external_id": "rpt-pnl", "deleted": false, "parent_folder": 2}
+  ],
+  "bi_datasource": [
+    {"id": 30, "name": "Sales Model", "external_id": "ds-sales-a", "deleted": true, "parent_folder": 1},
+    {"id": 40, "name": "Sales Model", "external_id": "ds-sales-a", "deleted": false, "parent_folder": 1},
+    {"id": 41, "name": "Sales Model", "external_id": "ds-sales-b", "deleted": false, "parent_folder": 1}
+  ],
+  "bi_report_column": [
+    {"id": 100, "name": "Revenue", "deleted": true, "report": 10},
+    {"id": 101, "name": "Margin", "deleted": true, "report": 10},
+    {"id": 200, "name": "Revenue", "deleted": false, "report": 20}
+  ]
+}
